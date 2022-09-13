@@ -4,6 +4,8 @@
 //
 // This file may be distributed under the terms of the GNU GPLv3 license.
 
+#ifdef TARGET_RP2040
+
 #include <stdint.h> // uint32_t
 #include <string.h> // memset
 #include "RP2040.h" // hw_set_bits
@@ -1256,3 +1258,5 @@ can2040_shutdown(struct can2040 *cd)
 {
     // XXX
 }
+
+#endif //TARGET_RP2040

@@ -1,5 +1,11 @@
+#ifdef TARGET_RP2040
+
 #ifndef _CAN2040_H
 #define _CAN2040_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include <stdint.h> // uint32_t
 
@@ -76,4 +82,10 @@ struct can2040 {
     struct can2040_transmit tx_queue[4];
 };
 
+#ifdef __cplusplus
+}
+#endif
+
 #endif // can2040.h
+
+#endif // TARGET_RP2040
